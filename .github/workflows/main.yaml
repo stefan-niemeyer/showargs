@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: publish
-        uses: versicherungskammer/multi-platform-docker-action@v1
+        uses: versicherungskammer/multi-platform-docker-action@test
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           email: auto
