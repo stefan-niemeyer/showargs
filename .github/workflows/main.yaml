@@ -10,4 +10,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           email: auto
-          auto-tags: commit-hash branch-name release-name latest-if-release
+          auto-tags: commit-hash branch-name latest-if-main
