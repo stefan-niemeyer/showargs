@@ -1,0 +1,13 @@
+name: Docker Image CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: publish
+        uses: versicherungskammer/multi-platform-docker-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          email: auto
+          auto-tags: commit-hash branch-name release-name latest-if-release
